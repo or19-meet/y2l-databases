@@ -3,9 +3,13 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy import create_engine
 
+
 Base = declarative_base()
 
-# Write your classes here :
 class Product(Base):
-    # TODO: complete this class
-    pass
+   __tablename__ = 'product'
+   id = Column(Integer, primary_key=True)
+   name = Column(String)
+   price = Column(Integer)
+   quantity = Column(Integer)
+   
